@@ -1,43 +1,38 @@
-
 body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
     margin: 0;
-  
     background-color: #f8f9fa;
-   
-  
 }
 
 /* Sidebar styling */
 .sidebar {
-    width: 250px; 
-    background-color: #ffffff; 
+    width: 250px;
+    background-color: #ffffff;
     padding: 20px;
-    height: 100vh; 
-    flex-shrink: 0; 
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    height: 100vh;
+    flex-shrink: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-   
-    
 }
+
+/* Main content */
 .main-content {
     font-family: "Poppins", sans-serif;
     flex-grow: 1;
     padding: 90px;
-    margin-left: 250px; 
-    overflow-x: auto; 
+    margin-left: 250px;
+    overflow-x: auto;
 }
+
+/* Navbar */
 .navbar {
     font-family: "Poppins", sans-serif;
     top: 0;
     margin-left: 250px;
-    right: 250px; 
-   
     background-color: white;
-   
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -72,7 +67,7 @@ body {
 
 /* Upgrade card */
 .upgrade-card {
-    background-color:#008369;
+    background-color: #008369;
     border: 1px solid #ddd;
     padding: 20px;
     margin-top: 20px;
@@ -97,40 +92,46 @@ body {
 
 /* Button hover effect */
 .upgrade-card .btn:hover {
-    background-color:  #008369;
+    background-color: #008369;
 }
+
 .progress-circle {
     position: relative;
     display: inline-block;
     width: 120px;
     height: 120px;
-  }
-  .progress-circle svg {
+}
+
+.progress-circle svg {
     transform: rotate(-90deg);
-  }
-  .progress-text {
+}
+
+.progress-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
-  .progress-circle {
+}
+
+.progress-circle {
     width: 120px;
     height: 120px;
     position: relative;
-  }
-  .outer-ring {
+}
+
+.outer-ring {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     background: conic-gradient(
-      #4b5563 0% 45%, /* Amazon */
-      #f59e0b 45% 80%, /* Alibaba */
-      #15803D 80% 100% /* Tokopedia */
+        #4b5563 0% 45%, /* Amazon */
+        #f59e0b 45% 80%, /* Alibaba */
+        #15803D 80% 100% /* Tokopedia */
     );
-  }
-  .inner-ring {
+}
+
+.inner-ring {
     width: 60%;
     height: 60%;
     background: white;
@@ -139,8 +140,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  .radar-chart-placeholder {
+}
+
+.radar-chart-placeholder {
     width: 150px;
     height: 150px;
     background: radial-gradient(circle, rgba(21, 128, 61, 0.2) 30%, rgba(0, 0, 0, 0) 70%);
@@ -156,6 +158,7 @@ body {
 h6 {
     font-size: 1rem;
 }
+
 .card {
     border-radius: 12px;
 }
@@ -177,4 +180,105 @@ h6 {
     width: 100%;
     max-width: 200px;
     margin: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 70px 20px;
+    }
+
+    .navbar {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .sidebar .nav-link {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .upgrade-card {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .progress-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .outer-ring {
+        height: 100%;
+        width: 100%;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 60px 15px;
+    }
+
+    .upgrade-card {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .progress-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .outer-ring {
+        height: 100%;
+        width: 100%;
+    }
+
+    .radar-chart-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+
+    .text-muted {
+        font-size: 0.7rem;
+    }
+
+    .card-body h6 {
+        font-size: 14px;
+    }
+
+    .card-body small {
+        font-size: 10px;
+    }
 }
